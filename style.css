@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 :root {
     --primary-red-bg:  hsl(0, 100%, 74%);
     --primaary-green: hsl(154, 59%, 51%);
@@ -18,18 +20,26 @@ body{
     background-image: url(./images/bg-intro-mobile.png);
     background-repeat: no-repeat;
     background-color: var(--primary-red-bg);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 #wrapper {
     padding: 2rem 1rem ;
 }
+
 .description {
     color: white;
+    text-align: center;
 }
 
 .description h1 {
     font-size: 42px;
     margin-bottom: 1rem;
+}
+
+span {
+    font-weight: 700;
 }
 
 .signup__container div {
@@ -42,6 +52,7 @@ body{
 .signup__container div, form {
     border-radius: 6px;
     margin-top: 2rem;
+    box-shadow: 1px 6px 3px -2px var(--neutral-dark-blue) ;
 }
 
 form {
@@ -51,35 +62,47 @@ form {
     display: block;
 }
 
-
 input, button {
     width: 100%;
-    padding: 10px;
+    padding: 1rem;
     border-radius: 6px;
+    margin-top: 1rem;
     border: 1px solid var(--neutral-grayech-blue);
 }
 
+.error {
+    background: url(./images/icon-error.svg) no-repeat 95%;
+}
+
 label {
-    display: inline-block;
-    margin-bottom: 1rem;
+    display: none;
+    color: var(--primary-red-bg);
+    text-align: right;
 }
 
 label, form p {
-    font-size: 13px;
+    font-size: 10px;
 }
 
 form p {
+    margin-top: 1rem;
     text-align: center;
 }
 
 button {
+    border: none;
     background-color: var(--primaary-green);
     color: #fff;
+    box-shadow: 1px 6px 3px -2px green;
 }
 
-@media (min-width: 610px){
+.terms__servises {
+    color: var(--primary-red-bg);
+}
+
+@media (min-width: 49.375em){
     body {
-        max-width: 900px;
+        max-width: 60em;
         margin: auto;
         background-image: url(./images/bg-intro-desktop.png);
         background-repeat: no-repeat;
@@ -88,9 +111,12 @@ button {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
     }
-
+    
+    .description{
+        text-align: left;
+    }
 
     .description, .signup__container {
         flex: 1;
