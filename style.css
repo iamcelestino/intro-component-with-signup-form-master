@@ -1,0 +1,99 @@
+
+:root {
+    --primary-red-bg:  hsl(0, 100%, 74%);
+    --primaary-green: hsl(154, 59%, 51%);
+    --accent-blue:hsl(248, 32%, 49%);
+    --neutral-dark-blue:  hsl(249, 10%, 26%);
+    --neutral-grayech-blue: hsl(246, 25%, 77%);
+}
+
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-color: var(--primary-red-bg);
+}
+
+#wrapper {
+    padding: 2rem 1rem ;
+}
+.description {
+    color: white;
+}
+
+.description h1 {
+    font-size: 42px;
+    margin-bottom: 1rem;
+}
+
+.signup__container div {
+    background-color: var(--accent-blue);
+    color: white;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.signup__container div, form {
+    border-radius: 6px;
+    margin-top: 2rem;
+}
+
+form {
+    background-color: white;
+    padding: 2rem;  
+    margin-top: 1.5rem;
+    display: block;
+}
+
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--neutral-grayech-blue);
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+label, form p {
+    font-size: 13px;
+}
+
+form p {
+    text-align: center;
+}
+
+button {
+    background-color: var(--primaary-green);
+    color: #fff;
+}
+
+@media (min-width: 610px){
+    body {
+        max-width: 900px;
+        margin: auto;
+        background-image: url(./images/bg-intro-desktop.png);
+        background-repeat: no-repeat;
+    }
+    #wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .description, .signup__container {
+        flex: 1;
+    }
+}
+
