@@ -13,7 +13,7 @@
 
 ## My process
 
-- this challenge was a little bit tough
+- this challenge was Easy
 
 ### Built with
 
